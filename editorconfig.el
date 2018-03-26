@@ -397,6 +397,9 @@ TRIM-TRAILING-WS."
         (and parent
              (editorconfig--is-a-mode-p parent want)))))
 
+(defvar editorconfig-set-major-mode--already nil
+  "Internal flag to avoid infinit call.")
+
 (defun editorconfig-set-major-mode (filetype)
   "Set buffer `major-mode' by FILETYPE.
 
